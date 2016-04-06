@@ -1,6 +1,6 @@
 # Dojo
 
-## As três leis do TDD:
+## As três leis do TDD
 
 Link: http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
 
