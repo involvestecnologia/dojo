@@ -8,7 +8,8 @@ Link: http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
 2. Você não deve escrever mais de um teste que é suficiente para falhar, ou falhar para compilar (You must not write more of a test than is sufficient to fail, or fail to compile).
 3. Você não deve escrever mais do que o suficiente de código de produção além do necessário para fazer o teste falho passar (You must not write more production code than is sufficient to make the currently failing test pass).
 
-As três regras do TDD:
+## Ciclo TDD
+
 Link: http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html
 
 1. Crie um teste unitário que falhe (Create a unit tests that fails).
