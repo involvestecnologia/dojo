@@ -1,1 +1,5 @@
-*.class
+.metadata
+.recommenders
+bin/
+tmp/
+.settings/
