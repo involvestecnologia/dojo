@@ -1,5 +1,35 @@
 # Dojo
 
+# Intuito
+ Tem por intuito a diversão, desafiar o programador com novos problemas, novas linguagens, enfim, buscar novas soluções saindo da zona de conforto.
+
+# Formatos
+ 1. Kata - Uma dupla apresenta uma solução pre desenvolvida e não há rotação do teclado com a plateia.
+ 2. Randori - Há uma máquina e participação de todos, a cada 5 minutos o piloto sai para a platéia, o co-piloto assume e alguem da platéia assume a posição do co-piloto.
+ 3. Kake - Há várias duplas trabalhando simultâneamente, a cada turno as duplas são trocadas.
+
+# Valores
+ 1. Respeito
+ 2. Cooperação
+ 3. Coragem
+ 4. Participação
+ 5. Simplicidade
+
+# Sempre Realizar Retrospectiva
+ 1. O que aprendemos? (feedbacks e agradecimentos)
+ 2. O que podemos melhorar?
+ 3. O que devemos continuar fazendo.
+
+# Alimentação
+ O mais importante, lembre-se sempre de levar quitutes e petiscos para os participantes, para manter todos alimentados e felizes :D
+ Sugestões:
+ 1. Amendoim
+ 2. Pão de queijo
+ 3. Paçoquinha
+ 4. Docinhos
+ 5. Bolo
+ 6. Refri
+
 ## As três leis do TDD
 
 Link: http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
