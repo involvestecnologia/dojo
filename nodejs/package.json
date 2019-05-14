@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Projeto dedicado ao coding dojo usando o framework node",
   "scripts": {
-    "test": "mocha -t 10000 --ui tdd --exit ContarAte1000PorExtenso/**/*.spec.js"
+    "test": "mocha -t 10000 --ui tdd --exit "
   },
   "devDependencies": {
     "eslint": "^4.19.1",
