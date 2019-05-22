@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { numeroPorExtenso } = require('./numeroPorExtenso');
+const numeroPorExtenso = require('./numeroPorExtenso');
 
 suite('Coding dojo', () => {
 
@@ -185,15 +185,31 @@ suite('Coding dojo', () => {
 
     describe('Teste de combinação com centenas, dezenas e unidades', () => {
 
-        it('deve concatenar centena e unidade corretamente (101)', () => {
+        it('deve concatenar centena e unidade corretamente', () => {
             assert.equal(numeroPorExtenso(101), 'centoeum');
+            assert.equal(numeroPorExtenso(202), 'duzentosedois');
+            assert.equal(numeroPorExtenso(505), 'quinhentosecinco');
         });
 
-        it('deve concatenar centena e dezena corretamente (110)', () => {
+        it('deve concatenar centena e dezena corretamente', () => {
             assert.equal(numeroPorExtenso(110), 'centoedez');
+            assert.equal(numeroPorExtenso(220), 'duzentosevinte');
+            assert.equal(numeroPorExtenso(550), 'quinhentosecinquenta');
+        });
+
+        it('deve concatenar centena, dezena e unidade corretamente', () => {
+            assert.equal(numeroPorExtenso(111), 'centoeonze');
+            assert.equal(numeroPorExtenso(222), 'duzentosevinteedois');
+            assert.equal(numeroPorExtenso(555), 'quinhentosecinquentaecinco');
         });
 
     });
+
+    describe('Testa o numero 1000', () => {
+        it('deve identificar o numero 1000', () => {
+            assert.equal(numeroPorExtenso(1000), 'mil');
+        });
+    })
 
 })
 

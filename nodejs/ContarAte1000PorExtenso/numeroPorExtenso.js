@@ -131,58 +131,70 @@ const centenasPorExtenso = (numero) => {
     }
 };
 
-const numeroPorExtenso = (numero) => {
-
-    if (numero < 10) {
-        return trataUnidade(numero);
-    }
-
+const trataDezena = numero => {
     if (numero >= 10 && numero < 20) {
         return dezenaPorExtenso(numero);
     }
 
-    if (numero >= 20 && numero < 100) {
-        let numeroStr = numero.toString();
-        let numeroArr = numeroStr.split('').map(n => parseInt(n));
-        let dezena = numeroArr[0];
-        let unidade = numeroArr[1];
+    let numeroStr = numero.toString();
+    let numeroArr = numeroStr.split('').map(n => parseInt(n));
+    let dezena = numeroArr[0];
+    let unidade = numeroArr[1];
 
-        if (unidade === 0) {
-            return dezenasRegularesPorExtenso(dezena);
-        }
+    let resultado = '';
+    if (dezena >= 2) {
+        resultado += dezenasRegularesPorExtenso(dezena);
+    }
+    if (unidade) {
+        resultado += 'e' + unidadePorExtenso(unidade);
+    }
+    return resultado;
+}
 
-        return dezenasRegularesPorExtenso(dezena) + 'e' + unidadePorExtenso(unidade);
+const trataCentena = numero => {
+    let numeroStr = numero.toString();
+    let numeroArr = numeroStr.split('').map(n => parseInt(n));
+    let centena = numeroArr[0];
+    let dezena = numeroArr[1];
+    let unidade = numeroArr[2];
+
+    if (centena == 1 && unidade == 0 && dezena == 0) {
+        return 'cem';
     }
 
-    if (numero >= 100) {
-        let numeroStr = numero.toString();
-        let numeroArr = numeroStr.split('').map(n => parseInt(n));
-        let centena = numeroArr[0];
-        let dezena = numeroArr[1];
-        let unidade = numeroArr[2];
+    let resultado = centenasPorExtenso(centena);
 
-        if (centena == 1 && unidade == 0 && dezena == 0) {
-            return 'cem';
-        }
+    if (dezena) {
+        resultado += 'e' + trataDezena(dezena * 10 + unidade);
+    } else if (unidade) {
+        resultado += 'e' + trataUnidade(unidade);
+    }
 
-        let resultado = centenasPorExtenso(centena);
+    return resultado;
+};
 
-        if (dezena != 0) {
-            resultado += 'e' + dezenaPorExtenso(dezena);
-        }
+const numeroPorExtenso = (numero) => {
+    if (numero === 1000) {
+        return 'mil';
+    }
 
-        if (unidade != 0) {
-            resultado += 'e' + unidadePorExtenso(unidade);
-        }
+    if (numero >= 100 && numero < 1000) {
+        return trataCentena(numero);
+    }
 
-        return resultado;
+    if (numero >= 10 && numero < 100) {
+        return trataDezena(numero);
+    }
+
+    if (numero < 10) {
+        return trataUnidade(numero);
     }
 
     throw new Error("Numero valido não tratado");
 }
 
 const trataUnidade = unidade => {
-    return unidadePorExtenso(numero);
+    return unidadePorExtenso(unidade);
 }
 
-module.exports.numeroPorExtenso = numeroPorExtenso;
+module.exports = numeroPorExtenso;
