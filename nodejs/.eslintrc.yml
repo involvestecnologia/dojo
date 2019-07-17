@@ -1,0 +1,12 @@
+extends: airbnb-base
+globals:
+  process: on
+  describe: on
+  before: on
+  after: on
+  beforeEach: on
+  afterEach: on
+  suite: on
+  test: on
+  it: on
+  xit: on
