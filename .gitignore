@@ -1,6 +1,8 @@
-.metadata
-.recommenders
-bin/
-tmp/
-.settings/
-nodejs/node_modules/*
+# Java
+java/**/target/
+java/**/.classpath
+java/**/.settings/
+java/**/.metadata/
+
+# NodeJS
+nodejs/**/node_modules/
