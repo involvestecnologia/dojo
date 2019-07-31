@@ -63,16 +63,16 @@ Tutorial recomendado: https://www.atlassian.com/git/tutorials/syncing/git-remote
 
 Comandos que usaremos:
 
-1. git status
-2. git add <arquivos>
-3. git commit -m "mensagem"
-4. git push origin master
+1. `git status`
+2. `git add <arquivos>`
+3. `git commit -m "mensagem"`
+4. `git push origin master`
 
 Resolução de conflitos
 
-5. git pull --rebase origin master
-6. git add <some-file>
-7. git rebase --continue
-8. git rebase --abort
+5. `git pull --rebase origin master`
+6. `git add <arquivo>`
+7. `git rebase --continue`
+8. `git rebase --abort`
 
 
