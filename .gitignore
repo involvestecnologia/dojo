@@ -3,6 +3,7 @@ java/**/target/
 java/**/.classpath
 java/**/.settings/
 java/**/.metadata/
+java/.sonarlint
 
 # NodeJS
 nodejs/**/node_modules/
