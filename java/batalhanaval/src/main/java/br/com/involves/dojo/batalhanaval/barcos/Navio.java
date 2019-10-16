@@ -10,8 +10,6 @@ import br.com.involves.dojo.batalhanaval.Coordenada;
 
 public abstract class Navio {
 	private int tamanho;
-	private int x;
-	private int y;
 	private List<Coordenada> coordenadas = new ArrayList<>();
 	private Orientacao orientacao;
 
@@ -21,22 +19,6 @@ public abstract class Navio {
 
 	public Navio(int tamanho) {
 		this.tamanho = tamanho;
-	}
-
-	public int getX() {
-		return x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public void setY(int y) {
-		this.y = y;
 	}
 
 	public List<Coordenada> getCoordenadas() {
@@ -68,5 +50,16 @@ public abstract class Navio {
 				coordenadas.add(new Coordenada(++x, y));
 			}
 		}
+	}
+
+	public boolean colide(Navio navio) {
+		for(Coordenada coordenada: this.getCoordenadas()) {
+			for(Coordenada novaCoordenada : navio.getCoordenadas()) {
+				if (novaCoordenada.equals(coordenada)) 
+					return true;
+			}
+		}
+		
+		return false;
 	}
 }

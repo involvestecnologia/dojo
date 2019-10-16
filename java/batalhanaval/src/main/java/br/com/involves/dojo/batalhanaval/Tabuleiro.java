@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.involves.dojo.batalhanaval.barcos.Navio;
+import br.com.involves.dojo.batalhanaval.exception.NaviosEmPosicoesConflitantesException;
 
 public class Tabuleiro {
 
@@ -12,12 +13,18 @@ public class Tabuleiro {
 	
 	List<Navio> navios = new ArrayList<>();
 	
-	public List<?> getNavios() {
+	public List<Navio> getNavios() {
 		return navios;
 	}
 
-	public boolean posiciona(Navio navio) {
-		return navios.add(navio);		
+	public boolean posiciona(Navio novoNavio) {
+		for(Navio navio : navios) {
+			if(navio.colide(novoNavio)) {
+				throw new NaviosEmPosicoesConflitantesException();
+			}
+		}
+		
+		return navios.add(novoNavio);		
 	}
 
 }
